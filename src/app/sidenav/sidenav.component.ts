@@ -9,7 +9,8 @@ export class SidenavComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {  
+
   }
 
 }

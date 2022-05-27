@@ -1,15 +1,43 @@
+
 app-inicio{
-    position: absolute;
-    right: 0;
-    width: 85%;
-    margin: 0;
-    height: 100%;
+  transition: opacity 0.3s;
 }
 
-app-sidenav{
+app-sidenav:hover + app-inicio{
+  opacity: 10%;
+  transition: opacity 0.5s;
+}
+
+
+
+
+@media (min-width:1025px)
+{
+  app-descripcion{
     position: absolute;
-    left: 0;
-    width: 15%;
-    margin: 0;
-    height: 100%;
+    bottom: 10;
+    width: 100%;
+    margin-top: 10%;
+    height: 50vh;
+  }
+}
+
+@media (min-width:500px) and (max-width: 1024px) 
+{
+  app-descripcion{
+    position: fixed;
+    margin-top: 100%;
+  }
+}
+
+
+@media (max-width: 499px) 
+{
+  app-descripcion{
+    position: absolute;
+    margin-top: 80vh;
+    width: 100%; 
+    padding: 1%;
+    height: 50vh;
+  }
 }

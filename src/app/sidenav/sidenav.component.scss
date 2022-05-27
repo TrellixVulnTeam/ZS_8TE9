@@ -1,3 +1,107 @@
-.cuerpo{
-    background-color: bisque;
+@import '../../styles.scss';
+
+
+.cuerpo {
+  height: 1vh;
+  padding: 2%;
+  margin-top: 15%;
+  margin-bottom: 20%;
+  margin-left: 2%;
+  padding-left:0%;
+  width: 5%;
+  color: white;
+  background: none;
+  transition: width var(--animacion), background-color var(--animacion) linear;
+  background-color: rgb(19, 19, 19);
+  font-family: 'Comfortaa', cursive;
+
+}
+
+.content{
+    padding-left: 3em;
+}
+
+i {
+  color: white;
+  margin: 0;
+}
+
+i:hover{
+    color: rgb(196, 196, 196);
+}
+
+
+
+#menuList{
+    font-size: 0;
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+}
+
+li{
+    margin-top: 10%;
+    margin-bottom: 10%;
+    transition: font-size 0.1s;
+}
+
+li:hover{
+    font-size: 1.2em;
+    transition: font-size var(--animacion);
+}
+
+.cuerpo:hover{
+    height: 50vh;
+    margin-bottom: 0;
+    width: 30%;
+    transition: width var(--animacion), background-color var(--animacion) linear;
+}
+
+.cuerpo:hover > .content #menuList{
+
+    font-size: 0.8em;
+    transition: font-size var(--animacion);
+
+}
+
+@media (min-width:1025px)
+{
+    .cuerpo:hover > .content #menuList{
+
+        font-size: 1.5em;
+    
+    }
+
+    #menuIconSmall{
+        display: none;
+    }
+    #menuIconXSmall{
+        display: none;
+    }
+}
+
+@media (min-width:500px) and (max-width: 1024px) 
+{
+     #menuIconLarge{
+        display: none;
+    }
+    #menuIconXSmall{
+        display: none;
+    }
+}
+
+
+@media (max-width: 499px) 
+{
+     #menuIconLarge{
+        display: none;
+    }
+    #menuIconSmall{
+        display:none;
+    }
+
+    .cuerpo:hover{
+        width: 80%;
+        height: 25vh;
+    }
 }
